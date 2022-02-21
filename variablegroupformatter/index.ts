@@ -1,4 +1,4 @@
-import tl = require('azure-pipelines-task-lib/task');
+import tl = require('azure-pipelines-task-lib');
 import * as azdev from "azure-devops-node-api";
 import * as ta from "azure-devops-node-api/TaskAgentApi";
 import * as ti from "azure-devops-node-api/interfaces/TaskAgentInterfaces";

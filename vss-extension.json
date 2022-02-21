@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "variable-group-formatter",
     "name": "Variable Group Formatter",
-    "version": "0.3.0",
+    "version": "0.4.2",
     "publisher": "devopsmindset",
     "targets": [
         {
@@ -44,9 +44,14 @@
     },
     "files": [
         {
-            "path": "buildandreleasetask"
+            "path": "VariableGroupFormatter"
         }
     ],
+    "links": {
+        "support": {
+          "uri": "https://github.com/devops-mindset/variable-group-formatter/issues"
+        }
+      },
     "contributions": [
         {
             "id": "custom-build-release-task",
@@ -62,5 +67,10 @@
     "repository": {
         "type": "git",
         "uri": "https://github.com/devops-mindset/variable-group-formatter.git"
-    }
+    },
+    "galleryFlags": [
+        "Preview",
+        "Public"
+    ]
+   
 }
