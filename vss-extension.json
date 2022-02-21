@@ -1,0 +1,66 @@
+{
+    "manifestVersion": 1,
+    "id": "variable-group-formatter",
+    "name": "Variable Group Formatter",
+    "version": "0.3.0",
+    "publisher": "devopsmindset",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Formats the variables in a variable group to differents formats to be used in a pipeline.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "variable",
+        "library",
+        "json",
+        "build",
+        "release",
+        "variable group",
+        "formatter",
+        "arguments"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "screenshots": [
+        {
+            "path": "images/screenshot.png"
+        },
+        {
+            "path": "images/screenshot2.png"
+        }
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "buildandreleasetask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildandreleasetask"
+            }
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/devops-mindset/variable-group-formatter.git"
+    }
+}

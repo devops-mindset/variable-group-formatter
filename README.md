@@ -1,1 +1,2 @@
-# variable-group-formatter
+# Variable Group Formatter
+
