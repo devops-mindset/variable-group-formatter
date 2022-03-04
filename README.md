@@ -6,11 +6,13 @@ This extension enables you to format [variable groups](https://docs.microsoft.co
 
 After installing the extension you will find the Task available in Release and Build Pipelines. 
 
-<img src="images/screenshot.png" alt="AddTask" width="450"/>
+![Adding Task](images/screenshot.png)
 
 Then you can set the parameters:
 
-<img src="images/screenshot2.png" alt="ModifyTask" width="450"/>
+![Set Paramaters](images/screenshot2.png)
+
+
 
 
 ### Paramaters
