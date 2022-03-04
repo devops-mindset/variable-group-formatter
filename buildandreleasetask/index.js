@@ -35,6 +35,7 @@ function run() {
         try {
             const projectId = tl.getVariable("System.TeamProjectId");
             const variableGroupID = tl.getInput('variableGroupID', true);
+            const outputFormat = tl.getInput('outputFormat', true);
             const accessToken = tl.getEndpointAuthorizationParameter('SYSTEMVSSCONNECTION', 'ACCESSTOKEN', false);
             const endpointUrl = tl.getEndpointUrl('SYSTEMVSSCONNECTION', false);
             if (variableGroupID == 'bad') {
@@ -49,7 +50,17 @@ function run() {
             vstsTask.getVariableGroup(projectId, +variableGroupID).then((variableGroup) => {
                 console.log(`Got variable group ${variableGroup.name}`);
                 for (let key in variableGroup.variables) {
-                    formattedVariables += `-${key} "${variableGroup.variables[key].value}" `;
+                    switch (outputFormat) {
+                        case "Command Line Arguments":
+                            formattedVariables += `-${key} "${variableGroup.variables[key].value}" `;
+                            break;
+                        case "JSON":
+                            formattedVariables += `{"name": "${key}" , "value" : "${variableGroup.variables[key].value}"},`;
+                            break;
+                    }
+                }
+                if (outputFormat == "JSON") {
+                    formattedVariables = `[${formattedVariables.slice(0, -1)}]`;
                 }
                 console.log("formattedVariables: " + formattedVariables);
                 tl.setVariable('formattedVariables', formattedVariables);

@@ -9,7 +9,7 @@
     "author": "Devops Mindset",
     "version": {
         "Major": 0,
-        "Minor": 7,
+        "Minor": 11,
         "Patch": 0
     },
     "instanceNameFormat": "Echo $(variableGroupID)",
