@@ -24,15 +24,11 @@ The following parameters are supported in the task:
 | Variable Group ID | `variableGroupID` | Variable Group ID. You can get this value from Azure Devops in the url when you are in a Group Variable or using azure cli  |
 | Output Format | `outputFormat` | The output format for the variables in the Variable Group ID. Accepted values are: `Command Line Arguments` and `JSON` |
 
-### Formats
-
-
-
 ### Output
 
 The result of the task is expected in an output variable: `formattedVariables`. See the examples section for more information.
 
-#### Formats
+### Formats
 
 If you have a Variable Group with the following values
 
