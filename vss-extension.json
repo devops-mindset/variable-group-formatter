@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "variable-group-formatter",
     "name": "Variable Group Formatter",
-    "version": "0.11.0",
+    "version": "1.0.0",
     "publisher": "devopsmindset",
     "targets": [
         {
@@ -73,7 +73,6 @@
         "uri": "https://github.com/devops-mindset/variable-group-formatter.git"
     },
     "galleryFlags": [
-        "Preview",
         "Public"
     ]
    
