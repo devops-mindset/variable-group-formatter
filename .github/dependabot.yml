@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # Monitor npm dependencies in the buildandreleasetask folder
+  - package-ecosystem: "npm"
+    directory: "/buildandreleasetask"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "npm"
+    # Group all non-major updates into a single PR
+    groups:
+      non-major-updates:
+        update-types:
+          - "minor"
+          - "patch"
+    # Automatically update GitHub Actions if any are added
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    commit-message:
+      prefix: "chore(ci)"
+    labels:
+      - "dependencies"
+      - "github-actions"

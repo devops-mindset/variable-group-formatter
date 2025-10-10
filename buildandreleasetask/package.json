@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc && webpack --mode production",
+    "prebuild": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,8 +17,12 @@
   },
   "devDependencies": {
     "@types/mocha": "^9.1.0",
-    "@types/node": "^17.0.18",
+    "@types/node": "^20.0.0",
     "@types/q": "^1.5.5",
-    "sync-request": "^6.1.0"
+    "sync-request": "^6.1.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }

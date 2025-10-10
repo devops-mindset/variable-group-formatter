@@ -55,7 +55,7 @@ In this example, using Output Format as `Command Line Arguments` we are able to 
 
 ```yaml
 steps:
-- task: VariableGroupFormatter@0
+- task: VariableGroupFormatter@1
   name: variableGroup
   displayName: "Format variables"
   inputs:

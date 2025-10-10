@@ -1,0 +1,14 @@
+# Exclude source TypeScript files - we only need the bundled output
+*.ts
+tsconfig.json
+webpack.config.js
+
+# Exclude node_modules - dependencies are bundled in dist/index.js
+node_modules/
+
+# Exclude development files
+.gitignore
+.taskkey
+
+# Include dist/ folder - this contains the bundled output
+!dist/
