@@ -43,7 +43,8 @@ async function run() {
 
     }
     catch (err) {
-        tl.setResult(tl.TaskResult.Failed, err.message);
+        const errorMessage = err instanceof Error ? err.message : String(err);
+        tl.setResult(tl.TaskResult.Failed, errorMessage);
     }
 }
 

@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "variable-group-formatter",
     "name": "Variable Group Formatter",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "publisher": "devopsmindset",
     "targets": [
         {

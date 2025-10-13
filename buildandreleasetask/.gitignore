@@ -1,1 +1,4 @@
 node_modules
+# Don't commit the bundled dist to git
+# Note: The dist folder WILL be included in the extension package via the build process
+dist
