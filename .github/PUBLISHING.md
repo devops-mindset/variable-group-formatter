@@ -60,10 +60,11 @@ cd ..
 npm install -g tfx-cli
 
 # Package the extension
-tfx extension create --manifest-globs vss-extension.json
+mkdir -p ./out
+tfx extension create --manifest-globs vss-extension.json --output-path ./out
 
 # Publish the extension
-tfx extension publish --vsix *.vsix --auth-type pat --token YOUR_PAT_TOKEN
+tfx extension publish --vsix ./out/*.vsix --auth-type pat --token YOUR_PAT_TOKEN
 ```
 
 ## Troubleshooting
